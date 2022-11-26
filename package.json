@@ -2,12 +2,14 @@
   "name": "module-02-shop",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve --env develop"
+    "dev": "webpack serve --env develop",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
     "css-loader": "^6.7.1",
     "html-loader": "^4.2.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "patch-package": "^6.5.0",
     "sass": "^1.55.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",

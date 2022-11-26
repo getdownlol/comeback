@@ -4,6 +4,7 @@ $orange:#d26a22;
 $white:#ffffff;
 $font-jost:'Jost', sans-serif;
 $font-cormorant:'Cormorant', serif;
+
 html{
     font-size: 10px;
 }
@@ -19,14 +20,17 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+   
+
     
   
     &__nav{
         display: flex;
-        list-style-type: none;
+        list-style-type: one;
         margin: 0;
         padding-left: 0;
         gap: 4.8rem;
+        list-style: none;
     }
     &__link{
         
@@ -100,6 +104,7 @@ display: block;
     position: relative;
     padding-bottom: 187px;
     background-repeat: no-repeat;
+
   
     
     &__item{
@@ -250,10 +255,10 @@ display: block;
 }
 .title{
     font-family: $font-cormorant;
-    font-weight: 700;
+    color: $green;
     font-size: 8rem;
-    margin: 0;
-    line-height: 1;
+margin-bottom: 1rem;
+    
     
     &__span{
         font-style: italic;
@@ -289,15 +294,186 @@ display: block;
   
 }
 .offer{
+    
     background-image: url(../images/offer.png);
     background-size: cover;
     background-position-x: center;
     background-repeat: no-repeat;
     padding-top: 2rem;
-    padding-bottom: 200px;
-    &_text{
+    padding-bottom: 12.8rem;
+    &__text{
         margin-top: 6rem;
-        max-width: 700px;
+        min-width: 700px;
+    }
+    &__slider{
+        overflow: hidden;
+        padding-top: 100px;
+
+   
+    }
+    &__link{
+      
+       color: rgba($green,  0.8); 
+    font-family: Jost;
+    font-size: 16px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    gap: 2rem;
+    text-decoration: none;
+    &:hover{
+        opacity: 1;
+    }
+&::before {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    opacity: .8;
+    background-image: url(../images/plus.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+}
+}
+.swiper{
+    
+    overflow: initial;
+    &-slide{
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid rgba($green, 0.4);
+        border-radius: 2rem;
+        padding: 4rem 3.7rem;
+        box-sizing: border-box;
+        height: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 0;
+       
+        &:hover{
+            box-shadow: 0 0 0 2px rgba($green, 0.4) inset;
+            .swiper-slide__hover{
+                height: 233px;
+                opacity: 1;
+            }
+            &::after{
+                content: "";
+                background-color: rgba($white, .55);
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                position: absolute;
+                top: 2px;
+                left: 3px;
+                border-radius: 2rem;
+                z-index: -1;
+            }
+        }
+        &__hover{
+            height: 0;
+            opacity: 0;
+         }
+         &-milk{
+            background-image: url(../images/milk.png);
+         }
+         &-noodles{
+            background-image: url(../images/noodles.png);
+         }
+         &-steaks{
+            background-image: url(../images/steaks.png);
+         }
+        &__title{
+            font-family: $font-cormorant;
+        font-size: 3rem;
+        color: $green;
+        margin-bottom: 0;
+        }
+        &__text{
+            color: rgba($green, 0.7);
+            line-height: 2.5rem;
+            margin-bottom: 6.4rem;
+            max-width: 263px;
+            margin-top: 2.5rem;
+
+        }
+     
+    }
+    &-pagination{
+        display: none;
+    }
+    &-button-next, &-button-prev{
+        &:hover{
+            &::after{
+                color: rgba( $green, 1);
+            }
+        }
+    top:-56px;
+    
+
+    &::after{
+        color: rgba( $green, .4);
+        font-size: 20px;
+    }
+    }
+
+    &-button-prev{
+        left: initial;
+        right: 100px;
     }
 }
-
+.about{
+    height: 554px;
+    &__box{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+        margin-top:7rem;   
+    }
+   
+        &__text{
+            margin-left: 12rem;
+            flex-basis: 620px;
+        }
+        &__list{
+            list-style: none;
+            display: flex;
+            gap: 9rem;
+            font-family: $font-cormorant;
+             font-size: 30px;
+             font-style: italic;
+             margin: 0;
+             padding-left: 0;
+        }
+        &__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &::before{
+            content: "";
+            width: 84px;
+            height: 84px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            border-radius: 100%;
+            border: 1px solid rgba($green, 0.4);
+            margin-bottom: 1.5rem;
+        }
+        &:nth-child(1){
+            &::before{
+                background-image: url(../images/fruits.png);
+            }
+        }
+       &:nth-child(2){
+&::before{
+    background-image: url(../images/traditional.png);
+}
+       }
+        }
+   
+}
