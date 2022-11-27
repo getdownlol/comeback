@@ -466,12 +466,12 @@ margin-bottom: 1rem;
         }
         &:nth-child(1){
             &::before{
-                background-image: url(../images/fruits.png);
+                background-image: url(../images/fruits1.svg);
             }
         }
        &:nth-child(2){
-&::before{
-    background-image: url(../images/traditional.png);
+        &::before{
+    background-image: url(../images/traditional1.svg);
 }
        }
         }
